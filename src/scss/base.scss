@@ -1,8 +1,16 @@
-html {
+$primary-color: rgb(22, 160, 133);
+
+body {       
+    margin: 0;
     font-size: 16px;
+    font-family: 'Indie Flower', cursive;
 }
 
-body {    
-    font-size: 62.5%;    
-    margin: 0;
+section {
+    font-size: 200%;    
+}
+
+.row {
+    text-align: center;
+    margin: 0 auto;
 }
