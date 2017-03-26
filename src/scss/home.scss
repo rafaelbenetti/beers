@@ -3,10 +3,14 @@
     color: #fff;
     padding: 5%;
     margin-bottom: 20px;
-    p {
+    .intro-text {
         margin-bottom: 0px;
-    }    
-} 
+    }
+    .intro-author {
+        display: inline-block;
+        font-weight: 600;
+    }
+}
 
 .beers {
     width: 90%;
@@ -32,8 +36,8 @@
 
 .reviews {
     background: #f6f1f1;
-    .review {   
-        width: 80%;     
+    .review {
+        width: 80%;
         margin: 0 auto;
         padding: 20px;
         min-height: 100px;
@@ -42,7 +46,7 @@
             width: 100px;
             height: 100px;
             background: #be7b7b;
-            border-radius: 50%;           
+            border-radius: 50%;
             margin-right: 15px
         }
         .review-text {
@@ -55,7 +59,7 @@
 .footer {
     background: #383636;
     padding: 5%;
-    color: white;    
+    color: white;
     .footer-text {
         margin: 0;
     }
@@ -69,11 +73,41 @@
         margin-bottom: 20px;
         margin-top: 20px;
         font-size: 80%;
-
+        &:hover {
+            cursor: pointer;
+            background: #074237;
+        }
+        &:focus {
+            outline: none;
+        }
     }
 }
 
-@media screen and (min-width: 480px) {    
+
+/* Animations =) */
+
+.beer {
+    animation: fadeIn 1s ease-out;
+    .beer-img:hover {
+        animation: tada 0.7s;
+    }
+}
+
+.intro {
+    .intro-text,
+    .intro-author {
+        animation: slideDown 1s;
+    }
+}
+
+.footer-button {
+    transition: all 0.5s;
+    &:hover {
+        animation: grow 0.5s ease-out forwards;
+    }
+}
+
+@media screen and (min-width: 480px) {
     .beer-content {
         display: table-cell;
         text-align: left;
@@ -81,11 +115,10 @@
     .beer-img {
         float: left;
         margin-right: 20px;
-    }    
+    }
     .beer-text {
         text-align: justify;
     }
-
     .review {
         text-align: left !important;
         .review-img {
@@ -95,7 +128,8 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .beer, .review {
+    .beer,
+    .review {
         width: 40%;
         display: inline-block;
     }
